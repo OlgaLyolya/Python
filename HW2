@@ -1,0 +1,55 @@
+#HW 2_1
+data = [
+    {'name': 'Viktor', 'city': 'Kiev', 'age': 30 },
+    {'name': 'Maksim', 'city': 'Dnepr', 'age': 20},
+    {'name': 'Vladimir', 'city': 'Lviv', 'age': 32},
+    {'name': 'Andrey', 'city': 'Kiev', 'age': 34},
+    {'name': 'Artem', 'city': 'Dnepr', 'age': 50},
+    {'name': 'Dmitriy', 'city': 'Lviv', 'age': 21}]
+
+#1.1) отсортировать массив из словарей по значению ключа ‘age' 
+#1.2) сгруппировать данные по значению ключа 'city' 
+
+data={}
+
+def data_age(data):
+    return sorted(data, key='age')
+
+print(data_age)
+
+data_city={}
+for info in data:
+    data_city[info.get('city')]=data_city.get(info.get('city'),[])
+    data_city[info.get('city')].append(info)
+
+print(data_city)
+
+#HW 2_2
+
+res=1
+def most_frequent(list_var):
+    for d in str(number):
+        res*=int(d) if int(d) else 1
+    return res
+
+#HW 2_3
+mult=1
+for i in n:
+    if int(i) != 0:
+        mult*=int(i)
+
+#HW 2_4
+def some_func(array, n):
+    if n>=len(array) or n<o:
+        return'-1'
+    else:
+        return int(array[n])**n
+
+#HW 2_5
+def our_string(symbols):
+    count = 0
+    for s in our_string.split():
+        if s.isalpha():
+            count += 1
+            if count == 3:
+                return True
