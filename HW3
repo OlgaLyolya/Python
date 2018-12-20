@@ -1,0 +1,32 @@
+#HW 3_1
+def cap_phrase(phrase):
+    result=''
+    for s in phrase:
+        if s.isupper():
+            result+=s
+            return result
+
+
+#HW 3_2
+def mult(array):
+    if len(array)==0:
+        return 0
+    nums=[array[i] for i in range(len(array)) if i%2==0]
+    return sum(nums)*array[len(array)-1]
+
+
+#HW 3_3
+first_word=lambda phrase: phrase.replace('.','').replace(',',''). strip().split('')[0]
+
+#HW 3_4
+lst=phrase.split()
+lst[-1], lst[0] = lst[0] , lst[-1]
+sep=' '
+print(sep.join(lst))
+
+#HW 3_5
+def convert(the_tuple):
+    a_string=''
+    for el in the_tuple:
+        a_string+=el
+    return a_string
